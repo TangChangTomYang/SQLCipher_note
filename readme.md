@@ -1,8 +1,10 @@
 
 
-# SQLCipher 使用说明
+# SQLCipher 使用总结
 
 本文章将主要介绍使用SQLCipher 加密数据库, 以及将 为加密的数据库迁移为 加密数据库
+
+
 
 
 
@@ -146,5 +148,26 @@ void encryptPlainTextDatabase(const string &src_database_file, const string &lic
                 
 	sqlite3_close(db_plaintext);
 }
+```
+
+
+
+# FMDB 相关库
+
+```
+# Uncomment the next line to define a global platform for your project
+
+platform :ios, '9.0'
+
+target 'abc' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'FMDB'
+  pod 'FMDB/SQLCipher'
+
+  # Pods for abc
+
+end
 ```
 
